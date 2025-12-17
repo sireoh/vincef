@@ -4,10 +4,8 @@
 import { FC, MouseEventHandler, useRef } from "react"
 import { Particles } from "../atoms/Particle"
 import * as utils from "./utils/utils"
-import { Data } from "./interfaces/Data"
-import import_data from "./data/data.json"
-const data: Data = import_data as unknown as Data;
 import Image from "next/image"
+import { data } from "./data/data"
 
 export const Hero: FC = () => {
   const mouse = useRef<[number, number]>([0, 0])
@@ -22,7 +20,7 @@ export const Hero: FC = () => {
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-evenly gap-16 px-4 md:px-16 lg:mt-32 lg:flex-row lg:items-start">
         <div className="mt-40 flex flex-col gap-16 lg:m-0 lg:w-1/2">
           <div className="gif flex justify-center">
-            <Image width="300" height="259" alt="RaccoonSpaceGif" src="/media/space.webp"/>
+            <Image width="300" height="259" alt="RaccoonSpaceGif" src="/media/space.webp" />
           </div>
           <div>
             <h2 className="text-base-content">Hello there,</h2>
@@ -36,7 +34,7 @@ export const Hero: FC = () => {
             <footer className="footer mt-5">
               <nav>
                 <div className="grid grid-flow-col gap-4 text-base-content">
-                  {utils.generateSocials(data.socials)}
+                  {utils.generateSocials(data.socials.map(social => Object.fromEntries(Object.entries(social).filter(([v]) => v !== undefined))))}
                 </div>
               </nav>
             </footer>

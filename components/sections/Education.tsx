@@ -1,7 +1,5 @@
+import { data } from "./data/data"
 import * as utils from "./utils/utils"
-import { Data } from "./interfaces/Data"
-import import_data from "./data/data.json"
-const data: Data = import_data as unknown as Data;
 
 export const Education = () => {
   return (

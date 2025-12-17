@@ -1,3 +1,4 @@
+import { Constants } from "@/components/constants"
 import { ImageResponse } from "next/og"
 
 // Route segment config
@@ -21,7 +22,7 @@ export default function Icon() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          backgroundImage: "url(https://res.cloudinary.com/dodz2eoby/image/upload/v1730065102/vincef.ca/favicon.png_kdrbhx.png)",
+          backgroundImage: `url('${Constants.IMAGES.FAVICON}')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
