@@ -1,0 +1,25 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+theme = 'sireoh'
+title = 'Vincent Fung | Software Developer'
+
+[menus]
+[[menus.main]]
+name = 'Home'
+pageRef = '/'
+weight = 10
+
+[[menus.main]]
+name = 'Projects'
+pageRef = '/projects'
+weight = 20
+
+[[menus.main]]
+name = 'Github'
+url = 'https://github.com/sireoh'
+weight = 30
+
+[params]
+author = 'Vincent Fung'
+biography = "I'm passionate about creating and constantly driven to learn new skills. Designing my own tools allows me complete control to shape them exactly to my needs.\n\nThe possibilities of what we can create are endless, limited only by our creativity and knowledge."
+tagline = 'I am a Computer Systems Technology Student at BCIT, as well as a freelance 2D Animation/Illustration artist.'

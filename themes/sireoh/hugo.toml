@@ -1,0 +1,35 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-US'
+title = 'My New Hugo Site'
+
+[menus]
+[[menus.main]]
+name = 'Home'
+pageRef = '/'
+weight = 10
+
+[[menus.main]]
+name = 'Projects'
+pageRef = '/projects'
+weight = 20
+
+[[menus.main]]
+name = 'Github'
+url = 'https://github.com/yourusername'
+weight = 30
+
+[module]
+[module.hugoVersion]
+extended = false
+min = '0.146.0'
+
+[params]
+author = 'Sireoh'
+biography = "Welcome to my personal website! I'm passionate about web development and design. Here, you'll find my projects, blog posts, and ways to connect with me. Let's create something amazing together!"
+tagline = 'Creating awesome web experiences'
+[[params.social]]
+name = "github"
+url = "https://github.com/sireoh"
+[[params.social]]
+name = "linkedin"
+url = "https://linkedin.com/in/yourusername"
