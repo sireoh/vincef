@@ -10,6 +10,8 @@ import { resume, profilepic } from "../assets"
 
 import { FaLinkedinIn, FaGithub, FaFilePdf } from 'react-icons/fa';
 
+import { Tooltip } from "react-tooltip"
+
 const About = () => {
   const sectionRef = useRef(null)
   const isInView = useInView(sectionRef, { once: true, amount: 0.2 })
@@ -65,6 +67,7 @@ const About = () => {
           </div>
           <div className="mt-10 flex flex-wrap gap-5 justify-center">
             <motion.button
+              id="linkedin-button"
               className="px-6 py-3 font-semibold text-white bg-gradient-to-r from-blue-400 to-blue-600 rounded-md shadow-[0_5px_0_0_rgba(0,0,0,0.6)] transition-all duration-100 ease-in-out hover:shadow-[0_3px_0_0_rgba(0,0,0,0.6)] hover:translate-y-[2px] active:translate-y-1 active:shadow-none select-none"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -72,8 +75,12 @@ const About = () => {
             >
               <FaLinkedinIn size={48} />
             </motion.button>
+            <Tooltip anchorSelect={`#linkedin-button`} place="top" style={{ zIndex: 9999 }}>
+              https://www.linkedin.com/in/vinceefung/
+            </Tooltip>
 
             <motion.button
+              id="github-button"
               className="px-6 py-3 font-semibold text-white bg-gradient-to-r from-gray-600 to-gray-800 rounded-md shadow-[0_5px_0_0_rgba(0,0,0,0.6)] transition-all duration-100 ease-in-out hover:shadow-[0_3px_0_0_rgba(0,0,0,0.6)] hover:translate-y-[2px] active:translate-y-1 active:shadow-none select-none"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -81,8 +88,12 @@ const About = () => {
             >
               <FaGithub size={48} />
             </motion.button>
+            <Tooltip anchorSelect={`#github-button`} place="top" style={{ zIndex: 9999 }}>
+              https://github.com/sireoh
+            </Tooltip>
 
             <motion.button
+              id="resume-button"
               className="px-16 py-3 font-semibold text-white bg-gradient-to-r from-blue-500 to-purple-500 rounded-md shadow-[0_5px_0_0_rgba(0,0,0,0.6)] transition-all duration-100 ease-in-out hover:shadow-[0_3px_0_0_rgba(0,0,0,0.6)] hover:translate-y-[2px] active:translate-y-1 active:shadow-none select-none"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -92,6 +103,9 @@ const About = () => {
                 <FaFilePdf size={48} />Resume
               </span>
             </motion.button>
+            <Tooltip anchorSelect={`#resume-button`} place="top" style={{ zIndex: 9999 }}>
+              View Resume
+            </Tooltip>
           </div>
         </motion.div>
 
