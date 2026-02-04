@@ -20,48 +20,47 @@ import {
 } from "react-icons/tb";
 
 const svgStyle = {
-  "size": 64,
-  "color": "default"
+  "size": 64
 }
 
 const programming_languages = [
-  { name: "Python", icon: <SiPython size={svgStyle.size} color={svgStyle.color} /> },
-  { name: "Java", icon: <FaJava size={svgStyle.size} color={svgStyle.color} /> },
-  { name: "JavaScript", icon: <SiJavascript size={svgStyle.size} color={svgStyle.color} /> },
-  { name: "TypeScript", icon: <SiTypescript size={svgStyle.size} color={svgStyle.color} /> },
-  { name: "C", icon: <SiC size={svgStyle.size} color={svgStyle.color} /> },
-  { name: "C#", icon: <TbBrandCSharp size={svgStyle.size} color={svgStyle.color} /> },
-  { name: "Kotlin", icon: <SiKotlin size={svgStyle.size} color={svgStyle.color} /> },
-  { name: "Go", icon: <SiGo size={svgStyle.size} color={svgStyle.color} /> },
-  { name: "SQL", icon: <TbSql size={svgStyle.size} color={svgStyle.color} /> },
-  { name: "Shell_Scripting_Bash", icon: <SiGnubash size={svgStyle.size} color={svgStyle.color} /> },
-  { name: "HTML", icon: <SiHtml5 size={svgStyle.size} color={svgStyle.color} /> },
-  { name: "CSS", icon: <SiCsswizardry size={svgStyle.size} color={svgStyle.color} /> },
-  { name: "EJS", icon: <SiEjs size={svgStyle.size} color={svgStyle.color} /> },
+  { name: "Python", icon: <SiPython size={svgStyle.size} /> },
+  { name: "Java", icon: <FaJava size={svgStyle.size} /> },
+  { name: "JavaScript", icon: <SiJavascript size={svgStyle.size} /> },
+  { name: "TypeScript", icon: <SiTypescript size={svgStyle.size} /> },
+  { name: "C", icon: <SiC size={svgStyle.size} /> },
+  { name: "C#", icon: <TbBrandCSharp size={svgStyle.size} /> },
+  { name: "Kotlin", icon: <SiKotlin size={svgStyle.size} /> },
+  { name: "Go", icon: <SiGo size={svgStyle.size} /> },
+  { name: "SQL", icon: <TbSql size={svgStyle.size} /> },
+  { name: "Shell_Scripting_Bash", icon: <SiGnubash size={svgStyle.size} /> },
+  { name: "HTML", icon: <SiHtml5 size={svgStyle.size} /> },
+  { name: "CSS", icon: <SiCsswizardry size={svgStyle.size} /> },
+  { name: "EJS", icon: <SiEjs size={svgStyle.size} /> },
 ];
 
 // const tools_and_frameworks = [
-//   { name: "Python", icon: <SiPython size={svgStyle.size} color={svgStyle.color} /> },
-//   { name: "Java", icon: <SiOpenjdk size={svgStyle.size} color={svgStyle.color} /> },
-//   { name: "JavaScript", icon: <SiJavascript size={svgStyle.size} color={svgStyle.color} /> },
-//   { name: "TypeScript", icon: <SiTypescript size={svgStyle.size} color={svgStyle.color} /> },
-//   { name: "Docker", icon: <SiDocker size={svgStyle.size} color={svgStyle.color} /> },
-//   { name: "Tailwind CSS", icon: <SiTailwindcss size={svgStyle.size} color={svgStyle.color} /> },
-//   { name: "React JS", icon: <SiReact size={svgStyle.size} color={svgStyle.color} /> },
-//   { name: "PostgreSQL", icon: <SiPostgresql size={svgStyle.size} color={svgStyle.color} /> },
-//   { name: "MongoDB", icon: <SiMongodb size={svgStyle.size} color={svgStyle.color} /> },
+//   { name: "Python", icon: <SiPython size={svgStyle.size}/> },
+//   { name: "Java", icon: <SiOpenjdk size={svgStyle.size}/> },
+//   { name: "JavaScript", icon: <SiJavascript size={svgStyle.size}/> },
+//   { name: "TypeScript", icon: <SiTypescript size={svgStyle.size}/> },
+//   { name: "Docker", icon: <SiDocker size={svgStyle.size}/> },
+//   { name: "Tailwind CSS", icon: <SiTailwindcss size={svgStyle.size}/> },
+//   { name: "React JS", icon: <SiReact size={svgStyle.size}/> },
+//   { name: "PostgreSQL", icon: <SiPostgresql size={svgStyle.size}/> },
+//   { name: "MongoDB", icon: <SiMongodb size={svgStyle.size}/> },
 // ];
 
 // const other = [
-//   { name: "Python", icon: <SiPython size={svgStyle.size} color={svgStyle.color} /> },
-//   { name: "Java", icon: <SiOpenjdk size={svgStyle.size} color={svgStyle.color} /> },
-//   { name: "JavaScript", icon: <SiJavascript size={svgStyle.size} color={svgStyle.color} /> },
-//   { name: "TypeScript", icon: <SiTypescript size={svgStyle.size} color={svgStyle.color} /> },
-//   { name: "Docker", icon: <SiDocker size={svgStyle.size} color={svgStyle.color} /> },
-//   { name: "Tailwind CSS", icon: <SiTailwindcss size={svgStyle.size} color={svgStyle.color} /> },
-//   { name: "React JS", icon: <SiReact size={svgStyle.size} color={svgStyle.color} /> },
-//   { name: "PostgreSQL", icon: <SiPostgresql size={svgStyle.size} color={svgStyle.color} /> },
-//   { name: "MongoDB", icon: <SiMongodb size={svgStyle.size} color={svgStyle.color} /> },
+//   { name: "Python", icon: <SiPython size={svgStyle.size}/> },
+//   { name: "Java", icon: <SiOpenjdk size={svgStyle.size}/> },
+//   { name: "JavaScript", icon: <SiJavascript size={svgStyle.size}/> },
+//   { name: "TypeScript", icon: <SiTypescript size={svgStyle.size}/> },
+//   { name: "Docker", icon: <SiDocker size={svgStyle.size}/> },
+//   { name: "Tailwind CSS", icon: <SiTailwindcss size={svgStyle.size}/> },
+//   { name: "React JS", icon: <SiReact size={svgStyle.size}/> },
+//   { name: "PostgreSQL", icon: <SiPostgresql size={svgStyle.size}/> },
+//   { name: "MongoDB", icon: <SiMongodb size={svgStyle.size}/> },
 // ];
 
 const Tech = () => {
