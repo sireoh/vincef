@@ -9,9 +9,8 @@ const ExperienceCard = React.memo(({ experience, isActive, onClick, index }) => 
   return (
     <motion.div
       variants={fadeIn("right", "spring", index * 0.1, 0.5)}
-      className={`flex items-center p-4 rounded-lg cursor-pointer transition-all duration-300 ${
-        isActive ? "bg-tertiary" : "bg-primary"
-      }`}
+      className={`flex items-center p-4 rounded-lg cursor-pointer transition-all duration-300 ${isActive ? "bg-tertiary" : "bg-primary"
+        }`}
       onClick={onClick}
       onKeyDown={(e) => e.key === 'Enter' && onClick()}
       role="button"

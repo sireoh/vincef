@@ -37,7 +37,7 @@ const ProjectCard = ({
           <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
             <div
               onClick={() => window.open(source_code_link, "_blank")}
-              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer transition-all duration-300 hover:shadow-[0_0_10px_rgba(128,0,128,0.7)]"
+              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center animated-cursor transition-all duration-300 hover:shadow-[0_0_10px_rgba(128,0,128,0.7)]"
             >
               <SiGithub size={28} />
             </div>
