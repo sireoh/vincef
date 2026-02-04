@@ -13,7 +13,7 @@ import Experience from "./Experience";
 import Works from "./Works";
 import Contact from "./Contact";
 import CanvasLoader from "./Loader";
-
+import AnimatedCursor from "./AnimatedCursor";
 export {
   Hero,
   Navbar,
@@ -28,4 +28,5 @@ export {
   BallCanvas,
   ComputersCanvas,
   StarsCanvas,
+  AnimatedCursor,
 };
