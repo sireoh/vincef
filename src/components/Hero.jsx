@@ -78,7 +78,7 @@ const Hero = () => {
 
   return (
     <section className="relative w-full h-screen mx-auto">
-      <style jsx>{`
+      <style jsx="true">{`
         @keyframes wave {
           0% { transform: rotate(0deg); }
           10% { transform: rotate(-10deg); }

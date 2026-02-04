@@ -26,7 +26,7 @@ const CanvasLoader = () => {
         <p className="text-lg font-bold text-white mb-2">Loading...</p>
         <p className="text-lg font-bold text-white">{progress.toFixed(0)}%</p>
       </div>
-      <style jsx>{`
+      <style jsx="true">{`
         .loader {
           width: 50px;
           aspect-ratio: 1;
