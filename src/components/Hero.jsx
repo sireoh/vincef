@@ -59,8 +59,8 @@ const TypewriterText = ({ texts }) => {
 
 const WavingHand = () => {
   return (
-    <img 
-      src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/72x72/1f44b.png" 
+    <img
+      src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/72x72/1f44b.png"
       alt="Waving Hand"
       className="wave-emoji"
       style={{ display: 'inline-block', marginLeft: '10px', width: '50px', height: '50px' }}
@@ -71,7 +71,7 @@ const WavingHand = () => {
 const Hero = () => {
   const typedItems = [
     "Software Developer",
-    "Systems Administrator",
+    "Freelance Illustrator / 2D Animator",
     "Computer Enthusiast",
     "Team Leader"
   ];
@@ -104,7 +104,7 @@ const Hero = () => {
 
         <div>
           <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I'm <span className="text-[#915EFF]">Sunny</span> <WavingHand />
+            Hi, I'm <span className="text-[#915EFF]">Vincent</span> <WavingHand />
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
             I'm a <TypewriterText texts={typedItems} />

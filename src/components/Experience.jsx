@@ -3,7 +3,7 @@ import { motion, AnimatePresence, useAnimation, useInView } from "framer-motion"
 import { styles } from "../styles";
 import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
-import { textVariant, fadeIn } from "../utils/motion";
+import { fadeIn } from "../utils/motion";
 
 const ExperienceCard = React.memo(({ experience, isActive, onClick, index }) => {
   return (

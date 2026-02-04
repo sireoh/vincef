@@ -1,42 +1,26 @@
-import React, { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
+import { Tooltip as ReactTooltip } from "react-tooltip";
 
 // Import all assets
 import {
   python,
   javascript,
   java,
-  cplusplus,
   typescript,
   docker,
   tailwind,
   reactjs,
   postgresql,
   mongodb,
-  threejs,
-  aws,
-  ubuntu,
-  powershell,
-  azure,
-  cisco,
-  connectwise,
-  virtualbox,
-  kalilinux,
-  wireshark,
-  nmap,
-  johntheripper,
-  photoshop,
-  premiere,
-  cinema4d,
 } from "../assets";
 
-const programming = [
+const programming_languages = [
   { name: "Python", icon: python },
   { name: "Java", icon: java },
-  { name: "C++", icon: cplusplus },
   { name: "JavaScript", icon: javascript },
   { name: "TypeScript", icon: typescript },
   { name: "Docker", icon: docker },
@@ -44,38 +28,41 @@ const programming = [
   { name: "React JS", icon: reactjs },
   { name: "PostgreSQL", icon: postgresql },
   { name: "MongoDB", icon: mongodb },
-  { name: "Three.js", icon: threejs },
 ];
 
-const itTools = [
-  { name: "AWS", icon: aws },
-  { name: "Ubuntu", icon: ubuntu },
-  { name: "PowerShell", icon: powershell },
-  { name: "Azure", icon: azure },
-  { name: "Cisco", icon: cisco },
-  { name: "ConnectWise", icon: connectwise },
-  { name: "VirtualBox", icon: virtualbox },
-  { name: "Kali Linux", icon: kalilinux },
-  { name: "Wireshark", icon: wireshark },
-  { name: "Nmap", icon: nmap },
-  { name: "John the Ripper", icon: johntheripper },
+const tools_and_frameworks = [
+  { name: "Python", icon: python },
+  { name: "Java", icon: java },
+  { name: "JavaScript", icon: javascript },
+  { name: "TypeScript", icon: typescript },
+  { name: "Docker", icon: docker },
+  { name: "Tailwind CSS", icon: tailwind },
+  { name: "React JS", icon: reactjs },
+  { name: "PostgreSQL", icon: postgresql },
+  { name: "MongoDB", icon: mongodb },
 ];
 
-const contentProduction = [
-  { name: "Photoshop", icon: photoshop },
-  { name: "Premiere Pro", icon: premiere },
-  { name: "Cinema 4D", icon: cinema4d },
+const other = [
+  { name: "Python", icon: python },
+  { name: "Java", icon: java },
+  { name: "JavaScript", icon: javascript },
+  { name: "TypeScript", icon: typescript },
+  { name: "Docker", icon: docker },
+  { name: "Tailwind CSS", icon: tailwind },
+  { name: "React JS", icon: reactjs },
+  { name: "PostgreSQL", icon: postgresql },
+  { name: "MongoDB", icon: mongodb },
 ];
 
 const Tech = () => {
   const [rows, setRows] = useState({
-    programming: [],
-    itTools: [],
-    contentProduction: [],
+    programming_languages: [],
+    tools_and_frameworks: [],
+    other: [],
   });
 
   const ref = useRef(null);
-  const isInView = useInView(ref, { 
+  const isInView = useInView(ref, {
     once: true,
     amount: 0.2
   });
@@ -114,9 +101,9 @@ const Tech = () => {
   useEffect(() => {
     const calculateRowsForAllCategories = () => {
       const rowsData = {
-        programming: calculateRows(window.innerWidth, programming),
-        itTools: calculateRows(window.innerWidth, itTools),
-        contentProduction: calculateRows(window.innerWidth, contentProduction),
+        programming_languages: calculateRows(window.innerWidth, programming_languages),
+        tools_and_frameworks: calculateRows(window.innerWidth, tools_and_frameworks),
+        other: calculateRows(window.innerWidth, other),
       };
       setRows(rowsData);
     };
@@ -133,14 +120,14 @@ const Tech = () => {
 
   const hexagonVariants = {
     hidden: { opacity: 0, scale: 0.8 },
-    visible: { 
-      opacity: 1, 
-      scale: 1, 
-      transition: { 
-        delay: Math.random() * 1.5, 
-        duration: 0.5, 
-        type: "spring" 
-      } 
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delay: Math.random() * 1.5,
+        duration: 0.5,
+        type: "spring"
+      }
     },
     hover: {
       scale: 1.05,
@@ -167,7 +154,7 @@ const Tech = () => {
           visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
         }}
         style={{
-          fontFamily: "'', cursive",
+          fontFamily: "'Verdana', sans-serif",
           fontSize: "26px",
           background: "linear-gradient(90deg, #915EFF, #00BFFF)",
           WebkitBackgroundClip: "text",
@@ -176,7 +163,7 @@ const Tech = () => {
           textFillColor: "transparent",
           filter: "drop-shadow(0 0 10px #915EFF)",
         }}
-      >{`<${categoryName}>`}</motion.h2>
+      >{formatCategoryName(categoryName)}</motion.h2>
       <div className="honeycomb-grid">
         {categoryRows?.map((row, rowIndex) => (
           <div
@@ -191,32 +178,28 @@ const Tech = () => {
                 initial="hidden"
                 animate="visible"
                 whileHover="hover"
+                data-tip={tech.name}
               >
-                <img src={tech.icon} alt={tech.name}  style={{ userSelect: "none" }} draggable="false"/>
+                <img src={tech.icon} alt={tech.name} style={{ userSelect: "none" }} draggable="false" />
               </motion.div>
             ))}
           </div>
         ))}
       </div>
-      <motion.h2
-        className="category-title bottom"
-        variants={{
-          hidden: { opacity: 0, y: 20 },
-          visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-        }}
-        style={{
-          fontFamily: "'', cursive",
-          fontSize: "26px",
-          background: "linear-gradient(90deg, #915EFF, #00BFFF)",
-          WebkitBackgroundClip: "text",
-          WebkitTextFillColor: "transparent",
-          backgroundClip: "text",
-          textFillColor: "transparent",
-          filter: "drop-shadow(0 0 10px #915EFF)",
-        }}
-      >{`</${categoryName}>`}</motion.h2>
+      <ReactTooltip place="top" type="dark" effect="solid" />
     </motion.div>
   );
+
+  /**
+   * Helper function to format category names
+   * @param {string} name 
+   * @returns a string with underscores replaced by spaces and the first letter of each word capitalized
+   */
+  const formatCategoryName = (name) => {
+    return name
+      .replace(/_/g, " ")
+      .replace(/\b\w/g, (char) => char.toUpperCase());
+  }
 
   return (
     <section className="skills" ref={ref}>
@@ -225,9 +208,9 @@ const Tech = () => {
           <p className={`${styles.sectionSubText} text-center`}>Technical Proficiencies</p>
           <h2 className={`${styles.sectionHeadText} text-center`}>Skills.</h2>
         </motion.div>
-        {renderCategory("programming", rows.programming)}
-        {renderCategory("itTools", rows.itTools)}
-        {renderCategory("contentProduction", rows.contentProduction)}
+        {renderCategory("programming_languages", rows.programming_languages)}
+        {renderCategory("tools_and_frameworks", rows.tools_and_frameworks)}
+        {renderCategory("other", rows.other)}
       </div>
     </section>
   );
