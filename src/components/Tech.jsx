@@ -6,16 +6,18 @@ import { textVariant } from "../utils/motion";
 import { Tooltip } from "react-tooltip";
 
 import {
-  SiJavascript,
-  SiReact,
-  SiTailwindcss,
-  SiPostgresql,
-  SiMongodb,
-  SiDocker,
-  SiPython,
-  SiTypescript,
-  SiOpenjdk,
+  SiPython, SiJavascript, SiTypescript,
+  SiKotlin, SiGo, SiC, SiHtml5,
+  SiGnubash, SiCsswizardry, SiEjs
 } from "react-icons/si";
+
+import {
+  FaJava
+} from "react-icons/fa";
+
+import {
+  TbBrandCSharp, TbSql
+} from "react-icons/tb";
 
 const svgStyle = {
   "size": 64,
@@ -24,39 +26,43 @@ const svgStyle = {
 
 const programming_languages = [
   { name: "Python", icon: <SiPython size={svgStyle.size} color={svgStyle.color} /> },
-  { name: "Java", icon: <SiOpenjdk size={svgStyle.size} color={svgStyle.color} /> },
+  { name: "Java", icon: <FaJava size={svgStyle.size} color={svgStyle.color} /> },
   { name: "JavaScript", icon: <SiJavascript size={svgStyle.size} color={svgStyle.color} /> },
   { name: "TypeScript", icon: <SiTypescript size={svgStyle.size} color={svgStyle.color} /> },
-  { name: "Docker", icon: <SiDocker size={svgStyle.size} color={svgStyle.color} /> },
-  { name: "Tailwind CSS", icon: <SiTailwindcss size={svgStyle.size} color={svgStyle.color} /> },
-  { name: "React JS", icon: <SiReact size={svgStyle.size} color={svgStyle.color} /> },
-  { name: "PostgreSQL", icon: <SiPostgresql size={svgStyle.size} color={svgStyle.color} /> },
-  { name: "MongoDB", icon: <SiMongodb size={svgStyle.size} color={svgStyle.color} /> },
+  { name: "C", icon: <SiC size={svgStyle.size} color={svgStyle.color} /> },
+  { name: "C#", icon: <TbBrandCSharp size={svgStyle.size} color={svgStyle.color} /> },
+  { name: "Kotlin", icon: <SiKotlin size={svgStyle.size} color={svgStyle.color} /> },
+  { name: "Go", icon: <SiGo size={svgStyle.size} color={svgStyle.color} /> },
+  { name: "SQL", icon: <TbSql size={svgStyle.size} color={svgStyle.color} /> },
+  { name: "Shell_Scripting_Bash", icon: <SiGnubash size={svgStyle.size} color={svgStyle.color} /> },
+  { name: "HTML", icon: <SiHtml5 size={svgStyle.size} color={svgStyle.color} /> },
+  { name: "CSS", icon: <SiCsswizardry size={svgStyle.size} color={svgStyle.color} /> },
+  { name: "EJS", icon: <SiEjs size={svgStyle.size} color={svgStyle.color} /> },
 ];
 
-const tools_and_frameworks = [
-  { name: "Python", icon: <SiPython size={svgStyle.size} color={svgStyle.color} /> },
-  { name: "Java", icon: <SiOpenjdk size={svgStyle.size} color={svgStyle.color} /> },
-  { name: "JavaScript", icon: <SiJavascript size={svgStyle.size} color={svgStyle.color} /> },
-  { name: "TypeScript", icon: <SiTypescript size={svgStyle.size} color={svgStyle.color} /> },
-  { name: "Docker", icon: <SiDocker size={svgStyle.size} color={svgStyle.color} /> },
-  { name: "Tailwind CSS", icon: <SiTailwindcss size={svgStyle.size} color={svgStyle.color} /> },
-  { name: "React JS", icon: <SiReact size={svgStyle.size} color={svgStyle.color} /> },
-  { name: "PostgreSQL", icon: <SiPostgresql size={svgStyle.size} color={svgStyle.color} /> },
-  { name: "MongoDB", icon: <SiMongodb size={svgStyle.size} color={svgStyle.color} /> },
-];
+// const tools_and_frameworks = [
+//   { name: "Python", icon: <SiPython size={svgStyle.size} color={svgStyle.color} /> },
+//   { name: "Java", icon: <SiOpenjdk size={svgStyle.size} color={svgStyle.color} /> },
+//   { name: "JavaScript", icon: <SiJavascript size={svgStyle.size} color={svgStyle.color} /> },
+//   { name: "TypeScript", icon: <SiTypescript size={svgStyle.size} color={svgStyle.color} /> },
+//   { name: "Docker", icon: <SiDocker size={svgStyle.size} color={svgStyle.color} /> },
+//   { name: "Tailwind CSS", icon: <SiTailwindcss size={svgStyle.size} color={svgStyle.color} /> },
+//   { name: "React JS", icon: <SiReact size={svgStyle.size} color={svgStyle.color} /> },
+//   { name: "PostgreSQL", icon: <SiPostgresql size={svgStyle.size} color={svgStyle.color} /> },
+//   { name: "MongoDB", icon: <SiMongodb size={svgStyle.size} color={svgStyle.color} /> },
+// ];
 
-const other = [
-  { name: "Python", icon: <SiPython size={svgStyle.size} color={svgStyle.color} /> },
-  { name: "Java", icon: <SiOpenjdk size={svgStyle.size} color={svgStyle.color} /> },
-  { name: "JavaScript", icon: <SiJavascript size={svgStyle.size} color={svgStyle.color} /> },
-  { name: "TypeScript", icon: <SiTypescript size={svgStyle.size} color={svgStyle.color} /> },
-  { name: "Docker", icon: <SiDocker size={svgStyle.size} color={svgStyle.color} /> },
-  { name: "Tailwind CSS", icon: <SiTailwindcss size={svgStyle.size} color={svgStyle.color} /> },
-  { name: "React JS", icon: <SiReact size={svgStyle.size} color={svgStyle.color} /> },
-  { name: "PostgreSQL", icon: <SiPostgresql size={svgStyle.size} color={svgStyle.color} /> },
-  { name: "MongoDB", icon: <SiMongodb size={svgStyle.size} color={svgStyle.color} /> },
-];
+// const other = [
+//   { name: "Python", icon: <SiPython size={svgStyle.size} color={svgStyle.color} /> },
+//   { name: "Java", icon: <SiOpenjdk size={svgStyle.size} color={svgStyle.color} /> },
+//   { name: "JavaScript", icon: <SiJavascript size={svgStyle.size} color={svgStyle.color} /> },
+//   { name: "TypeScript", icon: <SiTypescript size={svgStyle.size} color={svgStyle.color} /> },
+//   { name: "Docker", icon: <SiDocker size={svgStyle.size} color={svgStyle.color} /> },
+//   { name: "Tailwind CSS", icon: <SiTailwindcss size={svgStyle.size} color={svgStyle.color} /> },
+//   { name: "React JS", icon: <SiReact size={svgStyle.size} color={svgStyle.color} /> },
+//   { name: "PostgreSQL", icon: <SiPostgresql size={svgStyle.size} color={svgStyle.color} /> },
+//   { name: "MongoDB", icon: <SiMongodb size={svgStyle.size} color={svgStyle.color} /> },
+// ];
 
 const Tech = () => {
   const [rows, setRows] = useState({
@@ -106,8 +112,8 @@ const Tech = () => {
     const calculateRowsForAllCategories = () => {
       const rowsData = {
         programming_languages: calculateRows(window.innerWidth, programming_languages),
-        tools_and_frameworks: calculateRows(window.innerWidth, tools_and_frameworks),
-        other: calculateRows(window.innerWidth, other),
+        // tools_and_frameworks: calculateRows(window.innerWidth, tools_and_frameworks),
+        // other: calculateRows(window.innerWidth, other),
       };
       setRows(rowsData);
     };
@@ -191,7 +197,7 @@ const Tech = () => {
                   </div>
                 </motion.div>
                 <Tooltip anchorSelect={`#${categoryName}-row-${rowIndex}-${tech.name}`} place="top" style={{ zIndex: 9999 }}>
-                  {tech.name}
+                  {toTitleCase(tech.name)}
                 </Tooltip>
               </div>
             ))}
@@ -220,8 +226,8 @@ const Tech = () => {
           <h2 className={`${styles.sectionHeadText} text-center`}>Skills.</h2>
         </motion.div>
         {renderCategory("programming_languages", rows.programming_languages)}
-        {renderCategory("tools_and_frameworks", rows.tools_and_frameworks)}
-        {renderCategory("other", rows.other)}
+        {/* {renderCategory("tools_and_frameworks", rows.tools_and_frameworks)}
+        {renderCategory("other", rows.other)} */}
       </div>
     </section>
   );
