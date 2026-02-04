@@ -1,18 +1,10 @@
 import {
-  javascript,
-  java,
-  reactjs,
-  tailwind,
-  postgresql,
-  python,
-  typescript,
   axelotlanding,
   netdashlanding,
   securebankdashboard,
   sunnifyimage,
   knifethrowimage,
   financialflowimage,
-  mongodb,
   soulsurfer,
   agora,
   sfustormhacks,
@@ -81,25 +73,6 @@ const education = [
       "Honours Student",
       "Computer Programming Grade: 96%",
     ],
-  },
-];
-
-const technologies = [
-  {
-    name: "MongoDB",
-    icon: mongodb,
-  },
-  {
-    name: "PostgreSQL",
-    icon: postgresql,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
-  {
-    name: "React JS",
-    icon: reactjs,
   },
 ];
 
@@ -321,7 +294,6 @@ const projects = [
 ];
 
 export {
-  technologies,
   experiences,
   projects,
   education,

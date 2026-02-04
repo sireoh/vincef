@@ -8,6 +8,9 @@ import { SectionWrapper } from "../hoc"
 import { fadeIn } from "../utils/motion"
 import { resume, profilepic } from "../assets"
 
+import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
+import { SlBookOpen } from "react-icons/sl";
+
 const About = () => {
   const sectionRef = useRef(null)
   const isInView = useInView(sectionRef, { once: true, amount: 0.2 })
@@ -48,11 +51,11 @@ const About = () => {
           variants={fadeIn("right", "spring", 0.5, 0.75)}
           className="w-full md:w-1/3 flex flex-col items-center"
         >
-          <div className="relative w-64 h-64 rounded-full overflow-hidden shadow-[0_0_22.5px_7.5px_rgba(128,0,1028,1.0)]">
+          <div className="relative w-64 h-64 rounded-full overflow-hidden shadow-[0_0_22.5px_7.5px_rgba(128,0,1028,1.0)] bg-[#7e6175]">
             <div className="w-full h-full overflow-hidden">
               <img
                 src={profilepic || "/placeholder.svg"}
-                alt="Sunny Patel"
+                alt="Vincent Fung"
                 className="w-full h-full object-cover"
                 style={{
                   objectFit: "cover",
@@ -63,21 +66,12 @@ const About = () => {
           </div>
           <div className="mt-10 flex flex-wrap gap-5 justify-center">
             <motion.button
-              className="px-6 py-3 font-semibold text-white bg-gradient-to-r from-blue-500 to-purple-500 rounded-md shadow-[0_5px_0_0_rgba(0,0,0,0.6)] transition-all duration-100 ease-in-out hover:shadow-[0_3px_0_0_rgba(0,0,0,0.6)] hover:translate-y-[2px] active:translate-y-1 active:shadow-none select-none"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => window.open(resume, "_blank")}
-            >
-              Resume
-            </motion.button>
-
-            <motion.button
               className="px-6 py-3 font-semibold text-white bg-gradient-to-r from-blue-400 to-blue-600 rounded-md shadow-[0_5px_0_0_rgba(0,0,0,0.6)] transition-all duration-100 ease-in-out hover:shadow-[0_3px_0_0_rgba(0,0,0,0.6)] hover:translate-y-[2px] active:translate-y-1 active:shadow-none select-none"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => window.open("https://www.linkedin.com/in/vinceefung/", "_blank")}
             >
-              LinkedIn
+              <FaLinkedinIn size={48} />
             </motion.button>
 
             <motion.button
@@ -86,7 +80,18 @@ const About = () => {
               whileTap={{ scale: 0.95 }}
               onClick={() => window.open("https://github.com/sireoh", "_blank")}
             >
-              GitHub
+              <FaGithub size={48} />
+            </motion.button>
+
+            <motion.button
+              className="px-16 py-3 font-semibold text-white bg-gradient-to-r from-blue-500 to-purple-500 rounded-md shadow-[0_5px_0_0_rgba(0,0,0,0.6)] transition-all duration-100 ease-in-out hover:shadow-[0_3px_0_0_rgba(0,0,0,0.6)] hover:translate-y-[2px] active:translate-y-1 active:shadow-none select-none"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => window.open(resume, "_blank")}
+            >
+              <span className="flex flex-col items-center font-bold text-lg">
+                <SlBookOpen size={48} />Resume
+              </span>
             </motion.button>
           </div>
         </motion.div>

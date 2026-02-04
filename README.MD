@@ -227,10 +227,10 @@ Suggested commit style: conventional commits (e.g., `feat: add mobile camera pre
 <table>
 	<tr>
 		<td width="80">
-			<img src="src/assets/pfp.png" width="72" height="72" style="border-radius:50%" alt="Sunny Patel" />
+			<img src="src/assets/pfp.png" width="72" height="72" style="border-radius:50%" alt="Vincent Fung" />
 		</td>
 		<td>
-			<b>Sunny Patel</b><br/>
+			<b>Vincent Fung</b><br/>
 			<a href="https://www.sunnypatel.net">Website</a> • <a href="mailto:sunnypatel124555@gmail.com">Email</a> • <a href="https://www.linkedin.com/in/sunny-patel-30b460204/">LinkedIn</a>
 		</td>
 	</tr>

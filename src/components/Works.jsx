@@ -1,12 +1,12 @@
-import React, { useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import { Tilt } from "react-tilt";
 import { motion, useAnimation, useInView } from "framer-motion";
 
 import { styles } from "../styles";
-import { github } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn } from "../utils/motion";
+import { SiGithub } from "react-icons/si";
 
 const ProjectCard = ({
   name,
@@ -39,11 +39,7 @@ const ProjectCard = ({
               onClick={() => window.open(source_code_link, "_blank")}
               className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer transition-all duration-300 hover:shadow-[0_0_10px_rgba(128,0,128,0.7)]"
             >
-              <img
-                src={github}
-                alt="source code"
-                className="w-1/2 h-1/2 object-contain"
-              />
+              <SiGithub size={28} />
             </div>
           </div>
         </div>
@@ -112,11 +108,10 @@ const Works = () => {
 
       <motion.div>
         <div
-          className={`${
-            window.innerWidth <= 768
-              ? "grid grid-cols-1 gap-4 place-items-center"
-              : "flex flex-wrap gap-7"
-          }`}
+          className={`${window.innerWidth <= 768
+            ? "grid grid-cols-1 gap-4 place-items-center"
+            : "flex flex-wrap gap-7"
+            }`}
         >
           {projects.map((project, index) => (
             <ProjectCard
