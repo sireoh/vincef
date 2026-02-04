@@ -8,8 +8,7 @@ import { SectionWrapper } from "../hoc"
 import { fadeIn } from "../utils/motion"
 import { resume, profilepic } from "../assets"
 
-import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
-import { SlBookOpen } from "react-icons/sl";
+import { FaLinkedinIn, FaGithub, FaFilePdf } from 'react-icons/fa';
 
 const About = () => {
   const sectionRef = useRef(null)
@@ -90,7 +89,7 @@ const About = () => {
               onClick={() => window.open(resume, "_blank")}
             >
               <span className="flex flex-col items-center font-bold text-lg">
-                <SlBookOpen size={48} />Resume
+                <FaFilePdf size={48} />Resume
               </span>
             </motion.button>
           </div>
