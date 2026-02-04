@@ -1,6 +1,6 @@
-import profilepic from './pfp.jpg';
+import profilepic from './pfp.webp';
 
-import logo from "./logo0.png";
+import logo from "./logo.png";
 import backend from "./backend.png";
 import mobile from "./mobile.png";
 import web from "./web.png";
@@ -48,6 +48,10 @@ import whmis from "./company/whmis.png"
 import aws from "./tech/aws.png";
 import microsoft from "./company/microsoft.png";
 import ibm from "./company/ibm.svg";
+import soulsurfer from "./company/soulsurfer.png";
+import agora from "./company/agora.jpg";
+import sfustormhacks from "./company/sfustormhacks.png";
+import godotfirejam from "./company/godotfirejam.png";
 
 import axelotlanding from "./axelotlanding.png"
 import netdashlanding from "./netdashlanding.png"
@@ -112,5 +116,9 @@ export {
   azure,
   staples,
   microsoft,
-  ibm
+  ibm,
+  soulsurfer,
+  agora,
+  sfustormhacks,
+  godotfirejam
 };

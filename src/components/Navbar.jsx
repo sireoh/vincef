@@ -69,11 +69,9 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`${
-        styles.paddingX
-      } w-full flex items-center py-5 fixed top-0 z-20 transition-all duration-300 ${
-        scrolled ? "bg-primary shadow-lg" : "bg-transparent"
-      }`}
+      className={`${styles.paddingX
+        } w-full flex items-center py-5 fixed top-0 z-20 transition-all duration-300 ${scrolled ? "bg-primary shadow-lg" : "bg-transparent"
+        }`}
     >
       <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
         <Link
@@ -85,25 +83,25 @@ const Navbar = () => {
           }}
         >
           <img src={logo} alt='logo' className='w-9 h-9 object-contain' />
-          <motion.p 
+          <motion.p
             className='text-white text-[18px] font-bold cursor-pointer flex items-center'
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <span 
-              className='block' 
+            <span
+              className='block'
               style={{
-                fontFamily: "'Dancing Script', cursive",
-                fontSize: "26px",
+                fontFamily: "'Verdana', sans-serif",
+                fontSize: "16px",
                 background: "linear-gradient(90deg, #915EFF, #00BFFF)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
                 backgroundClip: "text",
                 textFillColor: "transparent",
-              }} 
+              }}
             >
-              {"</"}Sunny Patel{">"}
+              vincef.cc
             </span>
           </motion.p>
         </Link>
@@ -118,9 +116,8 @@ const Navbar = () => {
             >
               <a
                 href={`#${nav.id}`}
-                className={`${
-                  active === nav.title ? "text-white" : "text-secondary"
-                } hover:text-white text-[18px] font-medium cursor-pointer transition-colors duration-300`}
+                className={`${active === nav.title ? "text-white" : "text-secondary"
+                  } hover:text-white text-[18px] font-medium cursor-pointer transition-colors duration-300`}
                 onClick={() => setActive(nav.title)}
               >
                 {nav.title}
@@ -139,9 +136,8 @@ const Navbar = () => {
 
           {/* Menu Items */}
           <motion.div
-            className={`${
-              !toggle ? "hidden" : "flex"
-            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+            className={`${!toggle ? "hidden" : "flex"
+              } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: toggle ? 1 : 0, scale: toggle ? 1 : 0.95 }}
             transition={{ duration: 0.2 }}
@@ -153,9 +149,8 @@ const Navbar = () => {
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.3, delay: nav.id * 0.1 }}
-                  className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                    active === nav.title ? "text-white" : "text-secondary"
-                  }`}
+                  className={`font-poppins font-medium cursor-pointer text-[16px] ${active === nav.title ? "text-white" : "text-secondary"
+                    }`}
                   onClick={() => {
                     setToggle(!toggle);
                     setActive(nav.title);

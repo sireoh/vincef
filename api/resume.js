@@ -46,7 +46,7 @@ export default async function handler(req, res) {
     // If request path is /api/resume exactly, redirect to /resume/<filename>
     // so the browser's address bar reflects the actual filename (affects tab title)
     const url = req.url || '';
-    // If a name segment is provided (e.g., /api/resume/Resume-Sunny-Patel),
+    // If a name segment is provided (e.g., /api/resume/Resume-*),
     // try to serve the matching file ignoring extension.
     // If a specific basename is requested, try to match it ignoring extension
     const match = url.match(/^\/api\/resume\/(.+)$/);
@@ -71,10 +71,10 @@ export default async function handler(req, res) {
       ext === '.pdf'
         ? 'application/pdf'
         : ext === '.docx'
-        ? 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
-        : ext === '.doc'
-        ? 'application/msword'
-        : 'application/octet-stream';
+          ? 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+          : ext === '.doc'
+            ? 'application/msword'
+            : 'application/octet-stream';
 
     // Set headers to preserve filename when downloading
     // Serve inline and preserve the real filename for downloads

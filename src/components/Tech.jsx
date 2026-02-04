@@ -3,7 +3,7 @@ import { motion, useAnimation, useInView } from "framer-motion";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
-import { Tooltip as ReactTooltip } from "react-tooltip";
+import { Tooltip } from "react-tooltip";
 
 // Import all assets
 import {
@@ -24,8 +24,8 @@ const programming_languages = [
   { name: "JavaScript", icon: javascript },
   { name: "TypeScript", icon: typescript },
   { name: "Docker", icon: docker },
-  { name: "Tailwind CSS", icon: tailwind },
-  { name: "React JS", icon: reactjs },
+  { name: "Tailwind_CSS", icon: tailwind },
+  { name: "React_JS", icon: reactjs },
   { name: "PostgreSQL", icon: postgresql },
   { name: "MongoDB", icon: mongodb },
 ];
@@ -36,8 +36,8 @@ const tools_and_frameworks = [
   { name: "JavaScript", icon: javascript },
   { name: "TypeScript", icon: typescript },
   { name: "Docker", icon: docker },
-  { name: "Tailwind CSS", icon: tailwind },
-  { name: "React JS", icon: reactjs },
+  { name: "Tailwind_CSS", icon: tailwind },
+  { name: "React_JS", icon: reactjs },
   { name: "PostgreSQL", icon: postgresql },
   { name: "MongoDB", icon: mongodb },
 ];
@@ -48,8 +48,8 @@ const other = [
   { name: "JavaScript", icon: javascript },
   { name: "TypeScript", icon: typescript },
   { name: "Docker", icon: docker },
-  { name: "Tailwind CSS", icon: tailwind },
-  { name: "React JS", icon: reactjs },
+  { name: "Tailwind_CSS", icon: tailwind },
+  { name: "React_JS", icon: reactjs },
   { name: "PostgreSQL", icon: postgresql },
   { name: "MongoDB", icon: mongodb },
 ];
@@ -163,7 +163,7 @@ const Tech = () => {
           textFillColor: "transparent",
           filter: "drop-shadow(0 0 10px #915EFF)",
         }}
-      >{formatCategoryName(categoryName)}</motion.h2>
+      >{toTitleCase(categoryName)}</motion.h2>
       <div className="honeycomb-grid">
         {categoryRows?.map((row, rowIndex) => (
           <div
@@ -171,22 +171,27 @@ const Tech = () => {
             className={`honeycomb-row ${rowIndex % 2 === 1 ? "staggered-row" : ""}`}
           >
             {row.map((tech) => (
-              <motion.div
-                key={tech.name}
-                className="hexagon"
-                variants={hexagonVariants}
-                initial="hidden"
-                animate="visible"
-                whileHover="hover"
-                data-tip={tech.name}
-              >
-                <img src={tech.icon} alt={tech.name} style={{ userSelect: "none" }} draggable="false" />
-              </motion.div>
+              <>
+                <motion.div
+                  key={tech.name}
+                  id={`${categoryName}-row-${rowIndex}-${tech.name}`}
+                  className="hexagon"
+                  variants={hexagonVariants}
+                  initial="hidden"
+                  animate="visible"
+                  whileHover="hover"
+                  data-tip={tech.name}
+                >
+                  <img src={tech.icon} alt={tech.name} style={{ userSelect: "none" }} draggable="false" />
+                </motion.div>
+                <Tooltip anchorSelect={`#${categoryName}-row-${rowIndex}-${tech.name}`} place="top" style={{ zIndex: 9999 }}>
+                  {tech.name}
+                </Tooltip>
+              </>
             ))}
           </div>
         ))}
       </div>
-      <ReactTooltip place="top" type="dark" effect="solid" />
     </motion.div>
   );
 
@@ -195,7 +200,7 @@ const Tech = () => {
    * @param {string} name 
    * @returns a string with underscores replaced by spaces and the first letter of each word capitalized
    */
-  const formatCategoryName = (name) => {
+  const toTitleCase = (name) => {
     return name
       .replace(/_/g, " ")
       .replace(/\b\w/g, (char) => char.toUpperCase());

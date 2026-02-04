@@ -23,7 +23,7 @@
 
 <p align="center">
 	<picture>
-		<img src="src/assets/logo0.png" alt="Sunny Patel Portfolio" width="220" />
+		<img src="src/assets/favicon.png" alt="Vincent Fung Portfolio" width="220" />
 	</picture>
 </p>
 

@@ -10,25 +10,19 @@ import {
   postgresql,
   otu,
   rhhs,
-  wonderland,
-  mackenziehealth,
-  staples,
-  aws,
   python,
-  cplusplus,
   typescript,
   axelotlanding,
   netdashlanding,
   securebankdashboard,
   sunnifyimage,
   knifethrowimage,
-  powershell,
-  photoshop,
-  premiere,
-  cinema4d,
   financialflowimage,
   mongodb,
-  ibm,
+  soulsurfer,
+  agora,
+  sfustormhacks,
+  godotfirejam
 } from "../assets";
 
 export const navLinks = [
@@ -150,56 +144,56 @@ const technologies = [
 const experiences = [
   {
     title: "Software Engineer Intern",
-    company_name: "Soul Surfers Software",
-    icon: ibm,
+    company_name: "Soul Surfer Software",
+    icon: soulsurfer,
     iconBg: "#fff",
     date: "Sep. 2025 - Mar. 2026",
     points: [
-      "Full-Stack AI Engineering • watsonx Workshop 🤖",
+      "Lead Developer for the Historical Data System that managed the continuous download and storage of 1-minute bar data for 7,000+ tickers from NYSE and NASDAQ",
+      "Supervised a team of 7 engineers to assist in developing the Frontend dashboard for the Historical Data System using React Native (Expo).",
+      "Engineered high-confidence trading strategies, including the 'Big Short' ensemble model and 'Small Hotties' module, by utilizing Jupyter Notebooks and Matplotlib to perform exploratory data analysis and visualize P&L curves for iterative optimization",
+      "Modularized a monolithic codebase into independent, decoupled engines (Streamer, Signal, and Execution) to improve system maintainability and scalability.",
+      "Architected an automated trading system using Python and the Interactive Brokers (TWS) API to execute real-time buy/sell orders based on custom algorithmic strategies.",
+      "Helped Scott (CEO) setup the tools to create his home network into a data center."
     ],
   },
   {
-    title: "IT Technician",
-    company_name: "Canada's Wonderland",
-    icon: wonderland,
+    title: "Frontend Developer",
+    company_name: "Agora Art",
+    icon: agora,
     iconBg: "#fff",
-    date: "Jun. 2023 - Jan. 2026",
+    date: "May 2025",
     points: [
-      "Provisioned Windows PCs with MDT, and deployed scripting via PowerShell and ConnectWise.",
-      "Managed AD accounts to propagate ACLs and unified access across in-house apps, Exchange, and SharePoint.",
-      "Configured Cisco CUCM, Unity, and Finesse for stable call routing and voicemail services.",
-      "Handled switch patching and VLAN/routing via PuTTY & SecureCRT, ensuring stable network performance.",
-      "Deployed Oracle POS/KDS/Debit solutions (EMC, Simphony), tracking updates in Jira & Confluence.",
+      "Assisted in creating the Frontend for a data-centric “virtual mall” platform connecting thousands of independent sellers across Etsy, Shopify, and beyond.",
+      "Scaled platform architecture using React, Next.js, GraphQL, and Stripe to help users to explore styles across multiple marketplaces with click-through to original product pages, centralizing the festival fashion ecosystem.",
+      "Agile sprints via ClickUp, Leveraged Vercel, S3, EC2, NGINX, and PostgreSQL for scalable, production-grade infrastructure.",
+      "Integrated Stripe Connect, TaxJar, and 2Ship for seamless checkout, tax automation, and shipping workflows",
+      "References: Taylor Aucoin (CEO, CTO) - https://www.linkedin.com/in/taylor-aucoin"
     ],
   },
   {
-    title: "System Support Specialist",
-    company_name: "Mackenzie Health",
-    icon: mackenziehealth,
+    title: "Hackathon Winner (Finalists / Best Game)",
+    company_name: "SFU Stormhacks 2025",
+    icon: sfustormhacks,
     iconBg: "#fff",
-    date: "Jan. 2023 - Aug. 2023",
+    date: "May 2025",
     points: [
-      "Overhauled 400+ Surface tablets to bedside iPads, deploying the in-house 'Get Well Soon' app with Intune to hospital systems.",
-      "Developed and refined an admin portal for managing app services, user roles, and subscription expirations.",
-      "Utilized Jamf Pro for MDM, securely deploying iPads/iPhones across clinical departments.",
-      "Implemented Vocera VOIP on iPhones, enabling real-time communication among nurses and ER staff.",
-      "Performed in-room checks, resolved device issues, and collaborated with vendors on bug logs and system updates.",
+      "1st Place Finalist and Best Game Award out of 770+ participants in SFU Stormhacks 2025 by developing 'Survival Chess', a strategy based chess game using Node.js, TypeScript, PixiJS, and Vite.",
+      "Dev Post Link: https://devpost.com/software/survivalchess"
     ],
   },
   {
-    title: "Tech Sales Associate",
-    company_name: "Staples Canada (Co-op)",
-    icon: staples,
-    iconBg: "#1294C8",
-    date: "Sep. 2020 - Feb. 2021",
+    title: "Hackathon Winner (Third Place $318)",
+    company_name: "Godot Fire Jam",
+    icon: godotfirejam,
+    iconBg: "#fff",
+    date: "Nov. 2021",
     points: [
-      "Provided specialized support for Windows, Mac, and Linux, performing on-site installations, repairs, and optimizations.",
-      "Streamlined inventory processes by handling SKUs and POs, maintaining a well-organized sales floor.",
-      "Maintained accurate sales and inventory data in IBM AS/400, improving workflows and operational efficiency.",
-      "Resolved complex technical inquiries, delivering tailored solutions that ensured high customer satisfaction.",
-      "Facilitated e-commerce transactions, merging in-store and online channels.",
+      "3rd Place Winner out of 25+ participants in the Godot Fire Charity Jam by developing  'Mayhem', a 2D action-platformer game using Godot Engine.",
+      "Worked in a team of 4 to develop 'Mayhem', a 2D action-platformer game using Godot Engine, within a 7-day timeframe for the Godot Fire Charity Jam.",
+      "Itch.io Link: https://itch.io/jam/godot-fire-charity-jam-1/rate/1259174"
     ],
-  },
+  }
 ];
 
 const projects = [

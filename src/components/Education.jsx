@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -10,7 +10,6 @@ import "react-vertical-timeline-component/style.min.css";
 import { styles } from "../styles";
 import { education } from "../constants";
 import { SectionWrapper } from "../hoc";
-import { textVariant } from "../utils/motion";
 
 const EducationCard = ({ education }) => {
   return (
