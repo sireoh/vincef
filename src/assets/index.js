@@ -22,36 +22,13 @@ import cplusplus from "./tech/c++.svg"
 import typescript from "./tech/typescript.png"
 import threejs from "./tech/threejs.svg"
 
-import azure from "./tech/azure.png";
-import powershell from "./tech/powershell.svg"
-import cisco from "./tech/cisco.svg"
-import connectwise from "./tech/connectwise.png"
-import virtualbox from "./tech/virtualbox.png"
-import kalilinux from "./tech/kali_linux.svg"
-import wireshark from "./tech/wireshark.png"
-import nmap from "./tech/nmap.svg"
-import johntheripper from "./tech/johntheripper.svg"
-
-import photoshop from "./tech/photoshop.svg"
-import premiere from "./tech/premiere.svg"
-import cinema4d from "./tech/cinema4d.png"
-
-
-import otu from "./company/otu.png"
-import rhhs from "./company/rhhs.jpg"
-import wonderland from "./company/wonderland.jpg"
-import mackenziehealth from "./company/mackenziehealth.png"
-import privcurity from "./company/privcurity.jpg"
-import staples from "./company/staples.png"
-import google from "./company/google.png"
-import whmis from "./company/whmis.png"
-import aws from "./tech/aws.png";
-import microsoft from "./company/microsoft.png";
-import ibm from "./company/ibm.svg";
 import soulsurfer from "./company/soulsurfer.png";
 import agora from "./company/agora.jpg";
 import sfustormhacks from "./company/sfustormhacks.png";
 import godotfirejam from "./company/godotfirejam.png";
+import bcit from "./company/bcit.png";
+import emilycarr from "./company/emilycarr.webp";
+import nsss from "./company/northsurrey.jpg";
 
 import axelotlanding from "./axelotlanding.png"
 import netdashlanding from "./netdashlanding.png"
@@ -79,14 +56,6 @@ export {
   tailwind,
   postgresql,
   mongodb,
-  aws,
-  otu,
-  rhhs,
-  wonderland,
-  mackenziehealth,
-  privcurity,
-  google,
-  whmis,
   axelotlanding,
   netdashlanding,
   securebankdashboard,
@@ -95,17 +64,6 @@ export {
   python,
   cplusplus,
   typescript,
-  powershell,
-  cisco,
-  connectwise,
-  virtualbox,
-  kalilinux,
-  wireshark,
-  nmap,
-  johntheripper,
-  photoshop,
-  premiere,
-  cinema4d,
   resume,
   awsdbcert,
   connectwisecert,
@@ -113,12 +71,11 @@ export {
   profilepic,
   docker,
   threejs,
-  azure,
-  staples,
-  microsoft,
-  ibm,
   soulsurfer,
   agora,
   sfustormhacks,
-  godotfirejam
+  godotfirejam,
+  bcit,
+  emilycarr,
+  nsss,
 };

@@ -1,15 +1,9 @@
 import {
-  mobile,
-  backend,
-  web,
-  fullstack,
   javascript,
   java,
   reactjs,
   tailwind,
   postgresql,
-  otu,
-  rhhs,
   python,
   typescript,
   axelotlanding,
@@ -22,7 +16,10 @@ import {
   soulsurfer,
   agora,
   sfustormhacks,
-  godotfirejam
+  godotfirejam,
+  bcit,
+  emilycarr,
+  nsss,
 } from "../assets";
 
 export const navLinks = [
@@ -52,31 +49,12 @@ export const navLinks = [
   },
 ];
 
-const services = [
-  {
-    title: "Software Developer",
-    icon: fullstack,
-  },
-  {
-    title: "Systems Infrastructure",
-    icon: backend,
-  },
-  {
-    title: "Cloud Automation",
-    icon: mobile,
-  },
-  {
-    title: "Workflows",
-    icon: web,
-  },
-];
-
 const education = [
   {
     title: "Computer Systems Technology (Diploma)",
     company_name: "British Columbia Institute of Technology, Burnaby, BC",
-    icon: otu,
-    iconBg: "#fff",
+    icon: bcit,
+    iconBg: "#000",
     date: "2024 - 2026",
     points: [
       "Set Representative for the BCIT Student Association (BCITSA)",
@@ -85,7 +63,7 @@ const education = [
   {
     title: "Experimental + 2D Animation (Bachelors)",
     company_name: "Emily Carr University of Art and Design, Vancouver, BC",
-    icon: otu,
+    icon: emilycarr,
     iconBg: "#fff",
     date: "2017 - 2022",
     points: [
@@ -96,7 +74,7 @@ const education = [
   {
     title: "High School",
     company_name: "North Surrey Secondary School, Surrey, BC",
-    icon: rhhs,
+    icon: nsss,
     iconBg: "#fff",
     date: "2012-2017",
     points: [
@@ -108,24 +86,12 @@ const education = [
 
 const technologies = [
   {
-    name: "Java",
-    icon: java,
-  },
-  {
-    name: "Python",
-    icon: python,
-  },
-  {
     name: "MongoDB",
     icon: mongodb,
   },
   {
     name: "PostgreSQL",
     icon: postgresql,
-  },
-  {
-    name: "JavaScript",
-    icon: javascript,
   },
   {
     name: "Tailwind CSS",
@@ -135,10 +101,6 @@ const technologies = [
     name: "React JS",
     icon: reactjs,
   },
-  {
-    name: "TypeScript",
-    icon: typescript,
-  }
 ];
 
 const experiences = [
@@ -154,7 +116,8 @@ const experiences = [
       "Engineered high-confidence trading strategies, including the 'Big Short' ensemble model and 'Small Hotties' module, by utilizing Jupyter Notebooks and Matplotlib to perform exploratory data analysis and visualize P&L curves for iterative optimization",
       "Modularized a monolithic codebase into independent, decoupled engines (Streamer, Signal, and Execution) to improve system maintainability and scalability.",
       "Architected an automated trading system using Python and the Interactive Brokers (TWS) API to execute real-time buy/sell orders based on custom algorithmic strategies.",
-      "Helped Scott (CEO) setup the tools to create his home network into a data center."
+      "Helped Scott (CEO) setup the tools to create his home network into a data center.",
+      "Skills Used: Python, React Native, Expo, Jupyter Notebooks, Matplotlib, Interactive Brokers API"
     ],
   },
   {
@@ -166,9 +129,9 @@ const experiences = [
     points: [
       "Assisted in creating the Frontend for a data-centric “virtual mall” platform connecting thousands of independent sellers across Etsy, Shopify, and beyond.",
       "Scaled platform architecture using React, Next.js, GraphQL, and Stripe to help users to explore styles across multiple marketplaces with click-through to original product pages, centralizing the festival fashion ecosystem.",
-      "Agile sprints via ClickUp, Leveraged Vercel, S3, EC2, NGINX, and PostgreSQL for scalable, production-grade infrastructure.",
       "Integrated Stripe Connect, TaxJar, and 2Ship for seamless checkout, tax automation, and shipping workflows",
-      "References: Taylor Aucoin (CEO, CTO) - https://www.linkedin.com/in/taylor-aucoin"
+      "References: Taylor Aucoin (CEO, CTO) - https://www.linkedin.com/in/taylor-aucoin",
+      "Skills Used: React, Next.js, GraphQL, Stripe, Vercel, AWS (S3, EC2), NGINX, PostgreSQL"
     ],
   },
   {
@@ -178,8 +141,9 @@ const experiences = [
     iconBg: "#fff",
     date: "May 2025",
     points: [
-      "1st Place Finalist and Best Game Award out of 770+ participants in SFU Stormhacks 2025 by developing 'Survival Chess', a strategy based chess game using Node.js, TypeScript, PixiJS, and Vite.",
-      "Dev Post Link: https://devpost.com/software/survivalchess"
+      "1st Place Finalist and Best Game Award out of 770+ participants in SFU Stormhacks 2025 by developing 'Survival Chess', a strategy based chess game.",
+      "Dev Post Link: https://devpost.com/software/survivalchess",
+      "Skills Used: Node.js, TypeScript, PixiJS, Vite"
     ],
   },
   {
@@ -191,7 +155,8 @@ const experiences = [
     points: [
       "3rd Place Winner out of 25+ participants in the Godot Fire Charity Jam by developing  'Mayhem', a 2D action-platformer game using Godot Engine.",
       "Worked in a team of 4 to develop 'Mayhem', a 2D action-platformer game using Godot Engine, within a 7-day timeframe for the Godot Fire Charity Jam.",
-      "Itch.io Link: https://itch.io/jam/godot-fire-charity-jam-1/rate/1259174"
+      "Itch.io Link: https://itch.io/jam/godot-fire-charity-jam-1/rate/1259174",
+      "Skills Used: Godot Engine, GDScript, Photoshop, Bosca Ceoil"
     ],
   }
 ];
@@ -356,7 +321,6 @@ const projects = [
 ];
 
 export {
-  services,
   technologies,
   experiences,
   projects,
