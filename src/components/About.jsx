@@ -6,7 +6,7 @@ import { motion, useAnimation, useInView } from "framer-motion"
 import { styles } from "../styles"
 import { SectionWrapper } from "../hoc"
 import { fadeIn } from "../utils/motion"
-import { resume, profilepic } from "../assets"
+import { resume, profilepic, profilepic2 } from "../assets"
 
 import { FaLinkedinIn, FaGithub, FaFilePdf } from 'react-icons/fa';
 
@@ -22,6 +22,12 @@ const About = () => {
       mainControls.start("visible")
     }
   }, [isInView, mainControls])
+
+  function getRandomPfp() {
+    const pfps = [profilepic, profilepic2];
+    const randomIndex = Math.floor(Math.random() * pfps.length);
+    return pfps[randomIndex];
+  }
 
   return (
     <div ref={sectionRef} className="pt-[60px] md:pt-0 overflow-hidden">
@@ -55,7 +61,7 @@ const About = () => {
           <div className="relative w-64 h-64 rounded-full overflow-hidden shadow-[0_0_22.5px_7.5px_rgba(128,0,1028,1.0)] bg-[#7e6175]">
             <div className="w-full h-full overflow-hidden">
               <img
-                src={profilepic || "/placeholder.svg"}
+                src={getRandomPfp() || "/placeholder.svg"}
                 alt="Vincent Fung"
                 className="w-full h-full object-cover"
                 style={{

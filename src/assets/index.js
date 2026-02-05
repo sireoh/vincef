@@ -1,4 +1,5 @@
 import profilepic from './pfp.webp';
+import profilepic2 from './pfp2.webp';
 
 import logo from "./logo.png";
 
@@ -26,6 +27,7 @@ export {
   knifethrowimage,
   resume,
   profilepic,
+  profilepic2,
   soulsurfer,
   agora,
   sfustormhacks,
