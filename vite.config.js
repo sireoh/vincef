@@ -113,5 +113,6 @@ export default defineConfig({
   plugins: [react(), resumeDevPlugin],
   server: {
     port: 6767,
+    allowedHosts: 'vincef.cc',
   }
 })
