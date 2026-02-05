@@ -7,8 +7,10 @@ import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn } from "../utils/motion";
 import { SiGithub } from "react-icons/si";
+import { Tooltip } from "react-tooltip";
 
 const ProjectCard = ({
+  id,
   name,
   description,
   tags,
@@ -34,14 +36,21 @@ const ProjectCard = ({
             className="w-full h-full object-cover rounded-2xl"
           />
 
-          <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
-            <div
-              onClick={() => window.open(source_code_link, "_blank")}
-              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center animated-cursor transition-all duration-300 hover:shadow-[0_0_10px_rgba(128,0,128,0.7)]"
-            >
-              <SiGithub size={28} />
-            </div>
-          </div>
+          {source_code_link && (
+            <>
+              <div id={`${id}-source-code-link`} className="absolute inset-0 flex justify-end m-3 card-img_hover">
+                <div
+                  onClick={() => window.open(source_code_link, "_blank")}
+                  className="black-gradient w-10 h-10 rounded-full flex justify-center items-center animated-cursor transition-all duration-300 hover:shadow-[0_0_10px_rgba(128,0,128,0.7)]"
+                >
+                  <SiGithub size={28} />
+                </div>
+              </div>
+              <Tooltip anchorSelect={`#${id}-source-code-link`} place="top" style={{ zIndex: 9999 }}>
+                {source_code_link}
+              </Tooltip>
+            </>
+          )}
         </div>
 
         <div className="mt-5">
@@ -58,11 +67,16 @@ const ProjectCard = ({
         </div>
 
         {live_project_link && (
-          <a href={live_project_link} target="_blank" rel="noopener noreferrer">
-            <button className="mt-3 bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-md font-medium transition-all duration-300 hover:shadow-[0_0_10px_rgba(128,0,128,0.7)]">
-              Live Project
-            </button>
-          </a>
+          <>
+            <a id={`${id}-live-project-link`} href={live_project_link} target="_blank" rel="noopener noreferrer">
+              <button className="mt-3 bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-md font-medium transition-all duration-300 hover:shadow-[0_0_10px_rgba(128,0,128,0.7)]">
+                Live Project
+              </button>
+            </a>
+            <Tooltip anchorSelect={`#${id}-live-project-link`} place="top" style={{ zIndex: 9999 }}>
+              {live_project_link}
+            </Tooltip>
+          </>
         )}
       </Tilt>
     </motion.div>

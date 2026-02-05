@@ -1,9 +1,12 @@
 import {
-  axelotlanding,
-  netdashlanding,
-  securebankdashboard,
-  sunnifyimage,
-  knifethrowimage,
+  agoraart,
+  craigslistautofill,
+  mindfulminute,
+  pngtubergen,
+  slofbot,
+  survivalchess,
+  tradebuddy,
+  turnthetides,
   soulsurfer,
   agora,
   sfustormhacks,
@@ -11,6 +14,10 @@ import {
   bcit,
   emilycarr,
   nsss,
+  barter,
+  beantrack,
+  cubeman,
+  fridgeinfridgeout,
 } from "../assets";
 
 export const navLinks = [
@@ -135,7 +142,8 @@ const experiences = [
 
 const projects = [
   {
-    name: "Axelot ✍️",
+    id: "tradebuddy",
+    name: "TradeBuddy 📈",
     description:
       "Axelot is a real-time collaborative writing and knowledge workspace built with Next.js 16, TypeScript, Firebase, TipTap 3, and Yjs. It supports multi-user editing with presence cursors, CRDT-based conflict-free sync over WebRTC, and AI-assisted editing via OpenRouter-backed Next.js API routes. Features secure auth with NextAuth v5 (Google/GitHub OAuth, email/password with bcrypt), Firestore-backed storage with Firebase custom tokens, a Vercel cron-powered trending algorithm, and production deployment via multi-stage Docker pipeline.",
     tags: [
@@ -156,12 +164,13 @@ const projects = [
         color: "blue-text-gradient",
       },
     ],
-    image: axelotlanding,
-    source_code_link: "https://github.com/royce-mathew/axelot",
-    live_project_link: "https://www.axelot.io",
+    image: tradebuddy,
+    source_code_link: null,
+    live_project_link: "https://soulsurfer.ca",
   },
   {
-    name: "Netdash (Networking Toolbox) 🌐",
+    id: "turnthetides",
+    name: "TurnTheTides 🌊",
     description:
       "Netdash is a cross-platform Electron desktop app (macOS, Windows, Linux) with Homebrew distribution, featuring Firebase Auth with Google OAuth and real-time Firestore sync. It includes 15+ networking tools for subnetting, VLSM, IP conflict detection, and multi-vendor configuration generation. Built with RTT measurement via Performance API, TCP port scanning, DNS-over-HTTPS with TTL-aware caching, and RFC-compliant IPv4/IPv6 algorithms with WCAG2.2 accessibility compliance.",
     tags: [
@@ -182,12 +191,13 @@ const projects = [
         color: "blue-text-gradient",
       },
     ],
-    image: netdashlanding,
-    source_code_link: "https://github.com/sunnypatell/netdash-toolkit/",
-    live_project_link: "https://netdash-toolkit.vercel.app/",
+    image: turnthetides,
+    source_code_link: "https://github.com/TP-3T/4957-Tides",
+    live_project_link: "https://store.steampowered.com/search?term=turn+the+tides",
   },
   {
-    name: "SecureBank 🏦",
+    id: "fridgeinfridgeout",
+    name: "FridgeInFridgeOut 🍎",
     description:
       "SecureBank is a deliberately vulnerable banking simulation built for Capture The Flag (CTF) training, focused on SQL injection and privilege escalation. It features exploit paths including raw query interpolation, single/double URL encoding, and a hidden admin portal to teach secure coding by example. Core features include transaction search/filter, a feedback system, and an admin dashboard with live DB console and security logs. Backed by a normalized SQLite schema with session handling via cookie-signature, and dockerized with structured challenge documentation.",
     tags: [
@@ -208,12 +218,13 @@ const projects = [
         color: "blue-text-gradient",
       },
     ],
-    image: securebankdashboard,
-    source_code_link: "https://github.com/sunnypatell/securebank-ctf",
-    live_project_link: "https://github.com/sunnypatell/securebank-ctf",
+    image: fridgeinfridgeout,
+    source_code_link: "https://github.com/sireoh/FridgeInFridgeOut",
+    live_project_link: "https://github.com/sireoh/FridgeInFridgeOut",
   },
   {
-    name: "Sunnify (Spotify Downloader) 🎵",
+    id: "agoraartfestival",
+    name: "Agora Art Festival 💃",
     description:
       "Sunnify is a Spotify downloader that reverse-engineers embed pages to extract track metadata by parsing protected JSON states without authentication. It features a cross-platform PyQt5 desktop client (macOS, Windows, Linux) with thread-safe UI updates and supports playlists with 1000+ tracks via Spotify's internal spclient API. Includes retry logic with exponential backoff for rate limiting, cross-platform FFmpeg detection, 43 pytest unit tests with GitHub Actions CI/CD, and ships as a Homebrew Cask.",
     tags: [
@@ -234,12 +245,13 @@ const projects = [
         color: "blue-text-gradient",
       },
     ],
-    image: sunnifyimage,
-    source_code_link: "https://github.com/sunnypatell/sunnify-spotify-downloader",
-    live_project_link: "https://sunnify-spotify-downloader.vercel.app/",
+    image: agoraart,
+    source_code_link: null,
+    live_project_link: "https://www.agora.art/",
   },
   {
-    name: "FinancialFlow 💸",
+    id: "barter",
+    name: "BARTER 💰",
     description:
       "Comprehensive personal finance management application built with Next.js and Typescript. It empowers users to take control of their financial health through intuitive tracking, insightful analytics, and personalized recommendations.",
     tags: [
@@ -260,12 +272,13 @@ const projects = [
         color: "blue-text-gradient",
       },
     ],
-    image: null,
-    source_code_link: "https://github.com/sunnypatell/financialflow",
-    live_project_link: "https://financial-flow.vercel.app/",
+    image: barter,
+    source_code_link: "https://github.com/sireoh/BARTER",
+    live_project_link: "https://github.com/sireoh/BARTER",
   },
   {
-    name: "KnifeThrow 🎯",
+    id: "mindfulminute",
+    name: "Mindful Minute 🧘‍♂️",
     description:
       "KnifeThrow is a Java Swing-based 2D mini-game, packed by maven with over 5000 lines of code. It includes a menu, game-over screens, sound effects, and custom sprites. Players unlock different knives with varied abilities in a dedicated knife shop. The game features improved collision systems, animations, and particle effects for an immersive experience.",
     tags: [
@@ -286,9 +299,171 @@ const projects = [
         color: "green-text-gradient",
       },
     ],
-    image: knifethrowimage,
-    source_code_link: "https://github.com/sunnypatell/KnifeThrow",
-    live_project_link: "https://github.com/sunnypatell/KnifeThrow",
+    image: mindfulminute,
+    source_code_link: "https://github.com/sireoh/MindfulMinute",
+    live_project_link: "https://github.com/sireoh/MindfulMinute",
+  },
+  {
+    id: "beantrack",
+    name: "BeanTrack 🫘",
+    description:
+      "KnifeThrow is a Java Swing-based 2D mini-game, packed by maven with over 5000 lines of code. It includes a menu, game-over screens, sound effects, and custom sprites. Players unlock different knives with varied abilities in a dedicated knife shop. The game features improved collision systems, animations, and particle effects for an immersive experience.",
+    tags: [
+      {
+        name: "java",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "swing",
+        color: "green-text-gradient",
+      },
+      {
+        name: "maven",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "arcadegame",
+        color: "green-text-gradient",
+      },
+    ],
+    image: beantrack,
+    source_code_link: "https://github.com/sireoh/beantrack",
+    live_project_link: "https://beantrack.vincef.cc/",
+  },
+  {
+    id: "craigslistautofill",
+    name: "Craigslist Autofill ☮️",
+    description:
+      "KnifeThrow is a Java Swing-based 2D mini-game, packed by maven with over 5000 lines of code. It includes a menu, game-over screens, sound effects, and custom sprites. Players unlock different knives with varied abilities in a dedicated knife shop. The game features improved collision systems, animations, and particle effects for an immersive experience.",
+    tags: [
+      {
+        name: "java",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "swing",
+        color: "green-text-gradient",
+      },
+      {
+        name: "maven",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "arcadegame",
+        color: "green-text-gradient",
+      },
+    ],
+    image: craigslistautofill,
+    source_code_link: "https://github.com/sireoh/craigslist-autofill",
+    live_project_link: "https://addons.mozilla.org/en-US/firefox/addon/craigslist-autofill/",
+  },
+  {
+    id: "survivalchess",
+    name: "Survival Chess ♟️",
+    description:
+      "KnifeThrow is a Java Swing-based 2D mini-game, packed by maven with over 5000 lines of code. It includes a menu, game-over screens, sound effects, and custom sprites. Players unlock different knives with varied abilities in a dedicated knife shop. The game features improved collision systems, animations, and particle effects for an immersive experience.",
+    tags: [
+      {
+        name: "java",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "swing",
+        color: "green-text-gradient",
+      },
+      {
+        name: "maven",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "arcadegame",
+        color: "green-text-gradient",
+      },
+    ],
+    image: survivalchess,
+    source_code_link: "https://github.com/jpg157/Stormhacks_2025_Survival_Chess",
+    live_project_link: "https://devpost.com/software/survivalchess",
+  },
+  {
+    id: "slofbot",
+    name: "slofbot 🦥",
+    description:
+      "KnifeThrow is a Java Swing-based 2D mini-game, packed by maven with over 5000 lines of code. It includes a menu, game-over screens, sound effects, and custom sprites. Players unlock different knives with varied abilities in a dedicated knife shop. The game features improved collision systems, animations, and particle effects for an immersive experience.",
+    tags: [
+      {
+        name: "java",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "swing",
+        color: "green-text-gradient",
+      },
+      {
+        name: "maven",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "arcadegame",
+        color: "green-text-gradient",
+      },
+    ],
+    image: slofbot,
+    source_code_link: "https://github.com/sireoh/slofbot",
+    live_project_link: "https://github.com/sireoh/slofbot",
+  },
+  {
+    id: "cubeman",
+    name: "cubeman 🧊",
+    description:
+      "KnifeThrow is a Java Swing-based 2D mini-game, packed by maven with over 5000 lines of code. It includes a menu, game-over screens, sound effects, and custom sprites. Players unlock different knives with varied abilities in a dedicated knife shop. The game features improved collision systems, animations, and particle effects for an immersive experience.",
+    tags: [
+      {
+        name: "java",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "swing",
+        color: "green-text-gradient",
+      },
+      {
+        name: "maven",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "arcadegame",
+        color: "green-text-gradient",
+      },
+    ],
+    image: cubeman,
+    source_code_link: "https://github.com/sireoh/cubeman",
+    live_project_link: "https://sireoh.itch.io/cubeman",
+  },
+  {
+    id: "pngtubergenerator",
+    name: "PNGTuber Generator 🖼️",
+    description:
+      "KnifeThrow is a Java Swing-based 2D mini-game, packed by maven with over 5000 lines of code. It includes a menu, game-over screens, sound effects, and custom sprites. Players unlock different knives with varied abilities in a dedicated knife shop. The game features improved collision systems, animations, and particle effects for an immersive experience.",
+    tags: [
+      {
+        name: "java",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "swing",
+        color: "green-text-gradient",
+      },
+      {
+        name: "maven",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "arcadegame",
+        color: "green-text-gradient",
+      },
+    ],
+    image: pngtubergen,
+    source_code_link: "https://github.com/sireoh/pngtuber-gen",
+    live_project_link: "https://sireoh.itch.io/pnggen",
   }
 ];
 

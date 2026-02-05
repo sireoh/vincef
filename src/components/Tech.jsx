@@ -14,8 +14,8 @@ import {
   SiDotnet, SiSvelte, SiNextdotjs, SiDjango, SiOllama,
   SiVite, SiPostgresql, SiFastapi, SiNestjs, SiRedux, SiJetbrains,
   SiNginx, SiHuggingface, SiOracle, SiMongodb, SiUnity, SiEclipseide,
-  SiSlack, SiTrello, SiDiscord, SiAdobe,
-  SiClickup, SiJira, SiNotion
+  SiSlack, SiTrello, SiDiscord, SiAdobe, SiGooglecloud,
+  SiClickup, SiJira, SiNotion, SiCloudinary,
 } from "react-icons/si";
 
 import {
@@ -82,6 +82,8 @@ const tools_and_frameworks = [
   { id: "firebase", name: "Firebase", icon: <SiFirebase size={svgStyle.size} /> },
   { id: "oracle_db", name: "Oracle DB", icon: <SiOracle size={svgStyle.size} /> },
   { id: "mongodb", name: "MongoDB", icon: <SiMongodb size={svgStyle.size} /> },
+  { id: "cloudinary", name: "Cloudinary", icon: <SiCloudinary size={svgStyle.size} /> },
+  { id: "google_cloud", name: "Google Cloud", icon: <SiGooglecloud size={svgStyle.size} /> },
 
   // AI & ML
   { id: "huggingface", name: "Huggingface", icon: <SiHuggingface size={svgStyle.size} /> },
