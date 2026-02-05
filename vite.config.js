@@ -5,9 +5,6 @@ import path from 'path'
 import { PDFDocument } from 'pdf-lib'
 
 // https://vitejs.dev/config/
-// Dev helper: previously used a proxy target; now we serve directly via middleware.
-// Left here as documentation for prior approach.
-const resumeProxyTarget = process.env.VITE_RESUME_PROXY_TARGET || 'http://localhost:3000'
 
 // Dev-only middleware mirroring production behavior for `/resume`.
 // - Intercepts `/resume` and `/api/resume`
@@ -68,10 +65,10 @@ const resumeDevPlugin = {
             ext === '.pdf'
               ? 'application/pdf'
               : ext === '.docx'
-              ? 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
-              : ext === '.doc'
-              ? 'application/msword'
-              : 'application/octet-stream'
+                ? 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+                : ext === '.doc'
+                  ? 'application/msword'
+                  : 'application/octet-stream'
           res.setHeader('Content-Type', mime)
           res.setHeader('X-Content-Type-Options', 'nosniff')
           res.setHeader('Content-Disposition', `inline; filename="${filename}"`)
@@ -114,4 +111,7 @@ const resumeDevPlugin = {
 
 export default defineConfig({
   plugins: [react(), resumeDevPlugin],
+  server: {
+    port: 6767,
+  }
 })
