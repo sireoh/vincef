@@ -4,10 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  cursor: url('/darumaka.ani'), auto;
-}
-
 * {
   margin: 0;
   padding: 0;
