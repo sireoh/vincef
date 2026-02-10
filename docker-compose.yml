@@ -1,0 +1,8 @@
+services:
+  vincef:
+    image: ghcr.io/sireoh/vincef:latest
+    ports:
+      - "6767:80"
+    volumes:
+      - ./dist:/usr/share/nginx/html:ro
+    restart: unless-stopped
