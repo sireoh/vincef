@@ -95,7 +95,7 @@ const experiences = [
       "Engineered high-confidence trading strategies, including the 'Big Short' ensemble model and 'Small Hotties' module, by utilizing Jupyter Notebooks and Matplotlib to perform exploratory data analysis and visualize P&L curves for iterative optimization",
       "Modularized a monolithic codebase into independent, decoupled engines (Streamer, Signal, and Execution) to improve system maintainability and scalability.",
       "Architected an automated trading system using Python and the Interactive Brokers (TWS) API to execute real-time buy/sell orders based on custom algorithmic strategies.",
-      "Helped Scott (CEO) setup the tools to create his home network into a data center.",
+      "Helped CEO Scott M. setup the tools to create his home network into a data center.",
       "Skills Used: Python, React Native, Expo, Jupyter Notebooks, Matplotlib, Interactive Brokers API"
     ],
   },
