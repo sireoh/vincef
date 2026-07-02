@@ -109,10 +109,22 @@ const resumeDevPlugin = {
   },
 }
 
-export default defineConfig({
-  plugins: [react(), resumeDevPlugin],
-  server: {
-    port: 6767,
-    allowedHosts: ['vincef.cc'],
-  }
+export default defineConfig(({ mode }) => {
+  // Load env file based on the current mode (e.g., development, production)
+  // The third argument '' forces Vite to load all env variables, not just those starting with VITE_
+  const env = loadEnv(mode, process.cwd(), '');
+
+  // Split the comma-separated string from your .env into an array
+  // If ALLOWED_HOSTS is empty or missing, fallback to your default domain
+  const allowedHosts = env.ALLOWED_HOSTS
+    ? env.ALLOWED_HOSTS.split(',').map(host => host.trim())
+    : ['vincef.cc', 'vincefung.cc'];
+
+  return {
+    plugins: [react(), resumeDevPlugin],
+    server: {
+      port: 6767,
+      allowedHosts: allowedHosts,
+    }
+  };
 })

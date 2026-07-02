@@ -400,7 +400,7 @@ const projects = [
     ],
     image: beantrack,
     source_code_link: "https://github.com/sireoh/beantrack",
-    live_project_link: "https://beantrack.vincef.cc/",
+    live_project_link: "https://github.com/sireoh/beantrack",
   },
   {
     id: "craigslistautofill",

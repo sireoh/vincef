@@ -101,7 +101,7 @@ const Navbar = () => {
                 textFillColor: "transparent",
               }}
             >
-              vincef.cc
+              Vincent Fung
             </span>
           </motion.p>
         </Link>
